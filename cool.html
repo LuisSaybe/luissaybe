@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: black;
+    }
+    
+    .div > div {
+      margin: 2px 5px;
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      border-radius: 15%;
+      animation: spin;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes spin {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(360deg);}
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <input type="range" min="1" max="255" value="10">
+    <input oninput="resize(this.value)" type="range" min="1" max="200" value="10">
+    <input oninput="changeSpeed(this.value, this.min, this.max)" type="range" min="100" max="10000" value="100">
+    <input oninput="changeRadius(parseInt(this.value))" type="range" min="1" max="50" value="15">
+    <div class="div"><div style="background-color: rgb(100, 149, 237);"></div></div>
+  </div>
+  <script>
+  const add = function(start, index, jump) {
+    if (index < start.length) {
+      if (start[index] > 255) {
+        start[index] = 0;
+        add(start, index + 1);
+      } else {
+        start[index] += jump;
+
+        if (start[index] > 255) {
+          const remainder = Math.floor(start[index] / 255);
+          start[index] %= 255;
+          add(start, index + 1, remainder);
+        }
+      }
+    }
+  };
+
+  const spreadMethod = function(index) {
+    return (index + 34) * 19;
+  };
+
+  const div = document.querySelector('.div > div:first-child'),
+        input = document.querySelector('input'),
+        containerForDivs = document.querySelector('.div');
+
+  const repeat = function() {
+    requestAnimationFrame(function() {
+       for (let element of containerForDivs.children) {
+         var rgb = element.style.backgroundColor;
+         var vector = rgb.substring(4, rgb.length - 1).split(', ').map(string => parseInt(string));
+         const jump = parseInt(input.value);
+         add(vector, 0, jump);
+         element.style.backgroundColor = 'rgb(' + vector.join(',') + ')';
+       }
+
+       repeat();
+    });
+  };
+
+  window.changeRadius = function(value) {
+    const elements = document.querySelectorAll('.div > div');
+
+    for (let index = 0; index < elements.length; index++) {
+      elements[index].style.borderRadius = value + '%'
+    }
+  };
+
+  window.changeSpeed = function(value, minimum, maximum) {
+    const elements = document.querySelectorAll('.div > div');
+    minimum = parseInt(value);
+    maximum = parseInt(maximum);
+
+    for (let index = 0; index < elements.length; index++) {
+      const element = elements[index];
+      const percentage = (index + 1) / elements.length;
+      const speed = (maximum - minimum) * percentage + minimum;
+      const milliseconds = Math.floor(speed) + 'ms';
+      element.style.animationDuration = milliseconds;
+    }
+  };
+
+  window.resize = function(value) {
+    const difference = value - containerForDivs.children.length;
+
+    if (difference > 0) {
+      for (let index = 0; index < difference; index++) {
+        const clone = div.cloneNode(true);
+        clone.style.backgroundColor = '#' + spreadMethod(index).toString(16);
+        containerForDivs.appendChild(clone);
+      }
+    } else {
+      const minimum = containerForDivs.children.length + difference - 1;
+
+      for (let index = containerForDivs.children.length - 1; index > minimum; index--) {
+        containerForDivs.removeChild(containerForDivs.lastChild);
+      }
+    }
+  };
+
+  repeat();
+  </script>
+</body>
+</html>

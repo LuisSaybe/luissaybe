@@ -1,0 +1,157 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jackson Pollock Simulator</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body > div {
+        height: 100vh;
+        width: 100vw;
+        text-align: center;
+        margin-top: 3vh;
+      }
+
+      canvas {
+        margin-top: 5vh;
+        border: 1px solid black;
+      }
+
+      input {
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div>
+        <input name="color" value="6591981" type="range" min="0" max="16777215">
+      </div>
+    </div>
+    <script>
+      'use strict';
+      var color = document.querySelector('[name=color]');
+
+      var directions = [[[1, 0], [0, 1]], [[-1, 0], [0, -1]], [[1, 0], [0, -1]], [[-1, 0], [0, 1]]];
+
+      var canvas = document.createElement('canvas');
+      canvas.height = 500;
+      canvas.width = 1000;
+
+      document.querySelector('body > div').appendChild(canvas);
+      var context = canvas.getContext('2d');
+
+      var height = 25, width = 25;
+      var heightPadding = 3,
+          widthPadding = 3;
+      var canvasHeightOffset = 20,
+          canvasWidthOffset = 20;
+
+      var matrix = [];
+
+      for (var y = 0; y < canvas.height - (height + heightPadding); y += height + heightPadding) {
+        var row = [];
+
+        for (var x = 0; x < canvas.width - (width + widthPadding); x += width + widthPadding) {
+          row.push({
+            fillStyle: '#6495ed',
+            vector: [canvasWidthOffset + x, canvasHeightOffset + y, width, height]
+          });
+        }
+
+        matrix.push(row);
+      }
+
+      matrix.forEach(function (row) {
+        row.forEach(function (object) {
+          context.fillStyle = 'white';
+          context.rect.apply(context, object.vector);
+          context.fillRect.apply(context, object.vector);
+          context.stroke();
+        });
+      });
+
+      var getRandom = function getRandom(array) {
+        return array[Math.floor(Math.random() * array.length)];
+      };
+
+      var forEachDelay = function forEachDelay(delay, index, array, method) {
+        if (index < array.length) {
+          method(array[index]);
+
+          setTimeout(function () {
+            forEachDelay(delay, index + 1, array, method);
+          }, delay);
+        }
+      };
+
+      var walk = function walk(matrix, x, y, velocityVectors) {
+        var visited = new Set();
+        var orderedVisit = [];
+        var queue = [[x, y]];
+
+        while (queue.length > 0) {
+          var positionVector = queue.shift();
+          var object = matrix[positionVector[0]][positionVector[1]];
+
+          if (!visited.has(object)) {
+            (function () {
+              orderedVisit.push(object);
+              visited.add(object);
+
+              var velocityVector = getRandom(velocityVectors);
+              var newPositionVector = positionVector.map(function (component, index) {
+                return component + velocityVector[index];
+              });
+              var inBounds = newPositionVector[0] > -1 && newPositionVector[0] < matrix.length && newPositionVector[1] > -1 && newPositionVector[1] < matrix[newPositionVector[0]].length;
+
+              if (inBounds) {
+                queue.push(newPositionVector);
+              }
+            })();
+          }
+        }
+
+        return orderedVisit;
+      };
+
+      var onRectangleClicked = function onRectangleClicked(canvas, matrix, x, y) {
+        var context = canvas.getContext('2d');
+        var object = matrix[x][y];
+
+        var velocityVectors = getRandom(directions);
+        var path = walk(matrix, x, y, velocityVectors);
+
+        var hexColor = '#' + parseInt(color.value).toString(16);
+
+        forEachDelay(100, 0, path, function (object) {
+          context.fillStyle = hexColor;
+          context.rect.apply(context, object.vector);
+          context.fillRect.apply(context, object.vector);
+          context.stroke();
+        });
+      };
+
+      canvas.addEventListener('click', function (event) {
+        var canvas = event.target;
+        var offsetLeft = event.pageX - canvas.offsetLeft,
+            offsetTop = event.pageY - canvas.offsetTop;
+
+        for (var _x = 0; _x < matrix.length; _x++) {
+          for (var _y = 0; _y < matrix[_x].length; _y++) {
+            var object = matrix[_x][_y];
+
+            var clickInVector = offsetLeft >= object.vector[0] && offsetLeft <= object.vector[0] + object.vector[2] && offsetTop >= object.vector[1] && offsetTop <= object.vector[1] + object.vector[3];
+
+            if (clickInVector) {
+              onRectangleClicked(canvas, matrix, _x, _y);
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
