@@ -1,8 +1,6 @@
 #!/bin/bash
 
-NAME="luissaybe"
-
-ids=$(docker ps --filter="name=$NAME" -qa)
+ids=$(docker ps --filter="name=luissaybe" -qa)
 
 if [ "$ids" != "" ]; then
     docker stop "$ids"
@@ -12,7 +10,7 @@ fi
 
 docker run \
     -d \
-    --name="$NAME" \
-    -p 82:80 \
-    -v /root/luissaybe:/usr/share/nginx/html \
+    --name=luissaybe \
+    -p 80:80 \
+    -v $(pwd):/usr/share/nginx/html \
     nginx
