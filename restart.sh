@@ -7,10 +7,9 @@ if [ "$ids" != "" ]; then
     docker rm "$ids"
 fi
 
-
 docker run \
     -d \
     --name=luissaybe \
     -p 80:80 \
     -v $(pwd):/usr/share/nginx/html \
-    nginx
+    nginx:1.13.1
