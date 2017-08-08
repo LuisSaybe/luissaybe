@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>hivethegamer</title>
+    <style>
+     .selection  {
+       display: flex;
+     }
+
+     .selection > div {
+       flex-grow: 1;
+       box-shadow: 10px 5px 5px black;
+       text-align: center;
+       hover: cursor;
+     }
+
+     .selection > div:hover {
+       cursor: pointer;
+     }
+    </style>
+  </head>
+  <body>
+    <div class="selection">
+      <div data-path="audio/bsme.mp3">
+        C'mon don't bullshit me
+      </div>
+      <div data-path="audio/jeff.mp3">
+        my name jeff
+      </div>
+      <div data-path="audio/airhorn.mp3">
+        airhorn
+      </div>
+    </div>
+    <script>
+      var list = document.querySelectorAll('.selection div');
+
+      for (var index = 0 ; index < list.length; index++) {
+        var div = list[index];
+        div.onclick = function(e) {
+          var audio = new Audio(e.target.getAttribute('data-path'));
+          audio.play();
+        };
+      }
+    </script>
+  </body>
+</html>
