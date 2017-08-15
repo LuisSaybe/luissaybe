@@ -1,16 +1,24 @@
 <html>
   <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>hivethegamer</title>
     <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
      .selection  {
        display: flex;
+       flex-direction: column;
+       margin: 1rem 0 0 1rem;
      }
 
-     .selection > div {
-       flex-grow: 1;
-       box-shadow: 10px 5px 5px black;
-       text-align: center;
-       hover: cursor;
+     .selection > button {
+       margin-top: 1rem;
      }
 
      .selection > div:hover {
@@ -20,18 +28,21 @@
   </head>
   <body>
     <div class="selection">
-      <div data-path="audio/bsme.mp3">
+      <button data-path="/hive/audio/bsme.mp3">
         C'mon don't bullshit me
-      </div>
-      <div data-path="audio/jeff.mp3">
+      </button>
+      <button data-path="/hive/audio/jeff.mp3">
         my name jeff
-      </div>
-      <div data-path="audio/airhorn.mp3">
+      </button>
+      <button data-path="/hive/audio/airhorn.mp3">
         airhorn
-      </div>
+      </button>
+      <button data-path="/hive/audio/toasty.mp3">
+        toasty
+      </button>
     </div>
     <script>
-      var list = document.querySelectorAll('.selection div');
+      var list = document.querySelectorAll('.selection button');
 
       for (var index = 0 ; index < list.length; index++) {
         var div = list[index];
