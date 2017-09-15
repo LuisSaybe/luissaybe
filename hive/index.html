@@ -5,16 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>hivethegamer</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <style>
       * {
         padding: 0;
         margin: 0;
       }
 
+      h1, h2, h3, h4, h5, h6, p, span, a, button {
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      body {
+        background-color: #f06060;
+      }
+
      .selection  {
        display: flex;
        flex-direction: column;
-       margin: 1rem 0 0 1rem;
      }
 
      .selection > button {
@@ -26,8 +34,41 @@
      }
 
      button {
-       font-size: 1.5rem;
-     }
+      border-radius: 20px;
+       color: #fff;
+      	background: #cb4e4e;
+      	color: #fff;
+      	box-shadow: 0 6px #ab3c3c;
+      	-webkit-transition: none;
+      	-moz-transition: none;
+      	transition: none;
+
+        border: none;
+        font-size: inherit;
+        background: none;
+        cursor: pointer;
+        padding: 25px 80px;
+        display: inline-block;
+        margin: 15px 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700;
+        outline: none;
+        position: relative;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+
+      button:hover {
+      	box-shadow: 0 4px #ab3c3c;
+      	top: 2px;
+      }
+
+      button:active {
+      	box-shadow: 0 0 #ab3c3c;
+      	top: 6px;
+      }
     </style>
   </head>
   <body>
@@ -44,7 +85,7 @@
       <button data-path="/hive/audio/toasty.mp3">
         toasty
       </button>
-      <button data-path="/hive/audio/wombo.mp3">
+      <button data-path="/hive/audio/wombo.mp4">
         wombo
       </button>
       <button data-path="/hive/audio/jam.mp3">
@@ -52,6 +93,9 @@
       </button>
       <button data-path="/hive/audio/arnoldiscoming.mp3">
         arnold is coming
+      </button>
+      <button data-path="/hive/audio/birdperson.wav">
+        bird person
       </button>
     </div>
     <script>
