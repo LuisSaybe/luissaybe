@@ -17,31 +17,33 @@
       }
 
       body {
-        background-color: #f06060;
+        background-color: #8e4141;
+        background-image: url(https://emoji.slack-edge.com/T8ZRX6YRM/deh/0bfd3ab8594bade8.png);
       }
 
      .selection  {
-       display: flex;
-       flex-direction: column;
-     }
+        display: flex;
+        flex-direction: column;
+      }
 
-     .selection > button {
-       margin-top: 1rem;
-     }
+      .selection > button {
+        margin-top: 1rem;
+        background-color: #f06060;
+      }
 
-     .selection > div:hover {
-       cursor: pointer;
-     }
+      .selection > div:hover {
+        cursor: pointer;
+      }
 
-     button {
-      border-radius: 20px;
-       color: #fff;
-      	background: #cb4e4e;
-      	color: #fff;
-      	box-shadow: 0 6px #ab3c3c;
-      	-webkit-transition: none;
-      	-moz-transition: none;
-      	transition: none;
+      button {
+        border-radius: 20px;
+        color: #fff;
+        background: #cb4e4e;
+        color: #fff;
+        box-shadow: 0 6px #ab3c3c;
+        -webkit-transition: none;
+        -moz-transition: none;
+        transition: none;
 
         border: none;
         font-size: inherit;
@@ -61,13 +63,25 @@
       }
 
       button:hover {
-      	box-shadow: 0 4px #ab3c3c;
-      	top: 2px;
+     	  box-shadow: 0 4px #ab3c3c;
+     	  top: 2px;
       }
 
       button:active {
       	box-shadow: 0 0 #ab3c3c;
       	top: 6px;
+      }
+
+      @media only screen and (min-width: 600px) {
+        .selection  {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: none;
+        }
+
+        .button {
+          width: 29%;
+        }
       }
     </style>
   </head>
@@ -109,6 +123,12 @@
       <button data-path="/hive/audio/nice.mp3">
         nice
       </button>
+      <button data-path="/hive/audio/mgs_alert.mp3">
+        MGS Alert
+      </button>
+      <button data-path="/hive/audio/ff7_win.mp3">
+        FF7 Win
+      </button> 
     </div>
     <script>
       var list = document.querySelectorAll('.selection button');
