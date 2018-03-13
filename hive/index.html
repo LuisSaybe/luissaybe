@@ -23,7 +23,7 @@
 
      .selection  {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
       }
 
       .selection > button {
@@ -44,7 +44,6 @@
         -webkit-transition: none;
         -moz-transition: none;
         transition: none;
-        width: 29%;
 
         border: none;
         font-size: inherit;
@@ -71,6 +70,18 @@
       button:active {
       	box-shadow: 0 0 #ab3c3c;
       	top: 6px;
+      }
+
+      @media only screen and (min-width: 600px) {
+        .selection  {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: none;
+        }
+
+        .button {
+          width: 29%;
+        }
       }
     </style>
   </head>
