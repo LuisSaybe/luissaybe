@@ -24,6 +24,7 @@
      .selection  {
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
       }
 
       .selection > button {
@@ -72,17 +73,23 @@
       	top: 6px;
       }
 
-      @media only screen and (min-width: 600px) {
+      @media only screen and (min-width: 800px) {
         .selection  {
-          display: flex;
           flex-wrap: wrap;
-          flex-direction: none;
+          flex-direction: row;
         }
 
-        .button {
-          width: 29%;
+        button {
+          width: 42%;
         }
       }
+
+      @media only screen and (min-width: 1260px) {
+        button {
+          width: 28%;
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -123,12 +130,6 @@
       <button data-path="/hive/audio/nice.mp3">
         nice
       </button>
-      <button data-path="/hive/audio/mgs_alert.mp3">
-        MGS Alert
-      </button>
-      <button data-path="/hive/audio/ff7_win.mp3">
-        FF7 Win
-      </button> 
     </div>
     <script>
       var list = document.querySelectorAll('.selection button');
