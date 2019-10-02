@@ -1,0 +1,36 @@
+@import '~web/sass/color';
+@import '~web/sass/mixin';
+@import '~web/sass/media';
+
+.goals {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.root {
+  background-color: white;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.what-i-am-looking-for {
+  background-color: lighten(#1389E4, 30%);
+  color: #fff;
+}
+
+.what-i-am-looking-for-title {
+  color: #fff;
+}
+
+@include not_phone() {
+  .content {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
