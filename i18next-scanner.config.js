@@ -5,7 +5,7 @@ module.exports = {
             list: ['t'],
             extensions: ['.js', '.jsx']
         },
-        lngs: ['fr'],
+        lngs: ['fr', 'ko', 'es'],
         defaultValue: '',
         nsSeparator: false, // namespace separator
         keySeparator: false, // key separator

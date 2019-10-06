@@ -2,6 +2,50 @@
 @import '~web/sass/mixin';
 @import '~web/sass/media';
 
+$content-max-width: 1000px;
+
+.coffee {
+  width: 100%;
+}
+
+.content {
+  padding: 0 20px;
+}
+
+.know-each-other {
+  background-color: lighten(#1389E4, 30%);
+  color: #fff;
+}
+
+.right-section {
+  flex: 1 0 0;
+}
+
+.languages {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 20px;
+
+  > *:not(:first-child) {
+    margin-left: 12px;
+  }
+}
+
+.language-button {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.flag-svg {
+  width: 42px;
+}
+
+.image {
+  width: 100%;
+  border-radius: 6px;
+}
+
 .goals {
   display: flex;
   flex-direction: column;
@@ -9,14 +53,33 @@
 
 .link {
   text-decoration: none;
+  color: $anchor;
 }
 
 .root {
   background-color: white;
 }
 
+.section {
+  padding: 20px 0;
+}
+
+.text-content {
+  font-size: 1.1rem;
+}
+
+.text-vertical-spacing {
+  > :not(:first-child) {
+    margin-top: 12px;
+  }
+}
+
 .title {
   font-size: 2rem;
+}
+
+.left-section {
+  flex: 1 0 0;
 }
 
 .what-i-am-looking-for {
@@ -28,9 +91,28 @@
   color: #fff;
 }
 
-@include not_phone() {
+@include phone() {
   .content {
-    width: 70%;
+    > *:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+}
+
+@include not_phone() {
+  .coffee {
+    max-width: $content-max-width / 2;
     margin: 0 auto;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    max-width: $content-max-width;
+    margin: 0 auto;
+
+    > *:not(:first-child) {
+      margin-left: 20px;
+    }
   }
 }
