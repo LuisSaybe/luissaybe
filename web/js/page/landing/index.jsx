@@ -22,7 +22,7 @@ export function Landing() {
 
   return (
     <div styleName='root'>
-        <section styleName='languages'>
+        <header styleName='languages'>
           <button onClick={() => selectLanguage('ko')} styleName='language-button'>
             <img styleName='flag-svg' alt='south korea' src='https://luissaybe.nyc3.digitaloceanspaces.com/ttmk/south-korea.svg' />
           </button>
@@ -35,8 +35,8 @@ export function Landing() {
           <button onClick={() => selectLanguage('es')}  styleName='language-button'>
             <img alt='spain' styleName='flag-svg' src='https://luissaybe.nyc3.digitaloceanspaces.com/ttmk/spain.svg' />
           </button>
-        </section>
-        <section styleName='section'>
+        </header>
+        <section role='main' styleName='section'>
           <div styleName='content'>
             <div styleName='left-section text-content text-vertical-spacing'>
               <div styleName='title'>
@@ -56,7 +56,7 @@ export function Landing() {
               </div>
             </div>
             <div styleName='right-section'>
-              <img styleName='image' alt='' src='https://luissaybe.nyc3.digitaloceanspaces.com/ttmk/moscow.jpg' />
+              <img styleName='image' alt='' src='https://luissaybe.nyc3.digitaloceanspaces.com/ttmk/moscow_resized_compressed.jpg' />
             </div>
           </div>
         </section>
@@ -138,7 +138,7 @@ export function Landing() {
             <div styleName='text-content right-section text-vertical-spacing'>
               <div>
                 <Trans>
-                  You can find my english resume <a styleName='link' href='http://luissaybe.com/resume.pdf'>here</a>.
+                  You can find my english resume <a styleName='link' href='https://luissaybe.nyc3.digitaloceanspaces.com/resume.pdf'>here</a>.
                 </Trans>
               </div>
               <div>
@@ -152,7 +152,7 @@ export function Landing() {
         </section>
         <section styleName='section'>
           <div styleName='content'>
-            <img styleName='coffee image' alt='' src='https://luissaybe.nyc3.digitaloceanspaces.com/ttmk/IMG_7022.JPG' />
+            <img styleName='coffee image' alt='' src='https://luissaybe.nyc3.digitaloceanspaces.com/ttmk/coffee_resize_compressed.jpg' />
           </div>
         </section>
         <section styleName='section'>

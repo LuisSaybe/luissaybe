@@ -36,6 +36,7 @@ export function Application() {
   useEffect(() => {
     if (userInterfaceSettings.language && i18n.language !== userInterfaceSettings.language) {
       i18n.changeLanguage(userInterfaceSettings.language);
+      document.querySelector('html').setAttribute('lang', userInterfaceSettings.language);
     }
   }, [ userInterfaceSettings, i18n ]);
 
