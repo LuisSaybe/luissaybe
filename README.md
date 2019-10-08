@@ -20,6 +20,12 @@ docker-compose rm
 docker-compose up
 ```
 
-### install SSL certs
+### run in prod
 
-https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-centos-7
+```sh
+docker run -dit --name ttmik --rm -p 80:80 -p 443:443 luissaybe/ttmik nginx -c /root/project/docker/nginx.conf
+```
+
+### get SSL certs
+
+[tutorial](https://www.digitalocean.com/community/tutorials/how-to-use-certbot-standalone-mode-to-retrieve-let-s-encrypt-ssl-certificates-on-ubuntu-1804)
