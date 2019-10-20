@@ -46,10 +46,7 @@ export function Landing() {
                 {t('Nice to meet you, my name is Luis Saybe.')}
               </div>
               <div>
-                {t('I am currently in the early process of looking for employment in Seoul and am intertested at applying at Talk to Me in Korean.')}
-              </div>
-              <div>
-                {t('Talk To Me in Korean is my first choice as a company.')}
+                {t('I am currently in the early process of looking for employment in Seoul and am intertested at applying at Watcha.')}
               </div>
               <div>
                 {t('I made this page to introduce myself and share my goals.')}
@@ -125,9 +122,14 @@ export function Landing() {
               <div>
                 {t('I am planning to move to Seoul during 2020.')}
                 &nbsp;
-                {t('Because the logistics, time and money concerning travel to South Korea are prohibitively expensive I want to take this opportunity to meet the Talk to Me in Korean team if possible.')}
+                {t('Because the logistics, time and money concerning travel to South Korea are prohibitively expensive I want to take this opportunity to meet the Watcha team if possible.')}
               </div>
             </div>
+          </div>
+        </section>
+        <section styleName='section'>
+          <div styleName='content'>
+            <img styleName='coffee' alt='coffee and books' src='https://luissaybe.nyc3.digitaloceanspaces.com/IMG_1947.JPG' />
           </div>
         </section>
         <section styleName='section know-each-other'>
@@ -152,7 +154,7 @@ export function Landing() {
         </section>
         <section styleName='section'>
           <div styleName='content'>
-            <img styleName='coffee image' alt='' src='https://luissaybe.nyc3.digitaloceanspaces.com/ttmk/coffee_resize_compressed.jpg' />
+            <img styleName='coffee' alt='coffee and books' src='https://luissaybe.nyc3.digitaloceanspaces.com/ttmk/coffee_resize_compressed.jpg' />
           </div>
         </section>
         <section styleName='section'>
@@ -172,7 +174,7 @@ export function Landing() {
               </a>
             </div>
             <div>
-              <a styleName='link' href='https://open.spotify.com/user/sobibortreblinka?si=sOjDypJGQOmdwvpvZva_Fg'>
+              <a styleName='link' href='https://open.spotify.com/playlist/4f8p2uJxHYZOPwpaXR80KK'>
                 {t('spotify')}
               </a>
             </div>

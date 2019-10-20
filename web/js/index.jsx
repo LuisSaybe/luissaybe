@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import URLSearchParams from '@ungap/url-search-params';
-import 'react-toastify/dist/ReactToastify.css';
 
 import { Root } from 'web/js/page/root';
 
