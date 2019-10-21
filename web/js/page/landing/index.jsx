@@ -24,16 +24,16 @@ export function Landing() {
     <div styleName='root'>
         <header styleName='languages'>
           <button onClick={() => selectLanguage('ko')} styleName='language-button'>
-            <img styleName='flag-svg' alt='south korea' src='https://luissaybe.nyc3.digitaloceanspaces.com/ttmk/south-korea.svg' />
+            <img styleName='flag-svg' alt='south korea' src='https://luissaybe.nyc3.digitaloceanspaces.com/image/south-korea.svg' />
           </button>
           <button onClick={() => selectLanguage('en')} styleName='language-button'>
-            <img styleName='flag-svg' alt='united kingdom' src='https://luissaybe.nyc3.digitaloceanspaces.com/ttmk/united-kingdom.svg' />
+            <img styleName='flag-svg' alt='united kingdom' src='https://luissaybe.nyc3.digitaloceanspaces.com/image/united-kingdom.svg' />
           </button>
           <button onClick={() => selectLanguage('fr')} styleName='language-button'>
-            <img styleName='flag-svg' alt='france' src='https://luissaybe.nyc3.digitaloceanspaces.com/ttmk/france.svg' />
+            <img styleName='flag-svg' alt='france' src='https://luissaybe.nyc3.digitaloceanspaces.com/image/france.svg' />
           </button>
           <button onClick={() => selectLanguage('es')}  styleName='language-button'>
-            <img alt='spain' styleName='flag-svg' src='https://luissaybe.nyc3.digitaloceanspaces.com/ttmk/spain.svg' />
+            <img alt='spain' styleName='flag-svg' src='https://luissaybe.nyc3.digitaloceanspaces.com/image/spain.svg' />
           </button>
         </header>
         <section role='main' styleName='section'>
@@ -53,7 +53,7 @@ export function Landing() {
               </div>
             </div>
             <div styleName='right-section'>
-              <img styleName='image' alt='' src='https://luissaybe.nyc3.digitaloceanspaces.com/ttmk/moscow_resized_compressed.jpg' />
+              <img styleName='image' alt='' src='https://luissaybe.nyc3.digitaloceanspaces.com/image/moscow_resized_compressed.jpg' />
             </div>
           </div>
         </section>
@@ -154,7 +154,7 @@ export function Landing() {
         </section>
         <section styleName='section'>
           <div styleName='content'>
-            <img styleName='coffee' alt='coffee and books' src='https://luissaybe.nyc3.digitaloceanspaces.com/ttmk/coffee_resize_compressed.jpg' />
+            <img styleName='coffee' alt='coffee and books' src='https://luissaybe.nyc3.digitaloceanspaces.com/image/coffee_resize_compressed.jpg' />
           </div>
         </section>
         <section styleName='section'>
