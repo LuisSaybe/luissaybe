@@ -1,5 +1,6 @@
 module.exports = {
     options: {
+        removeUnusedKeys: true,
         debug: true,
         func: {
             list: ['t'],

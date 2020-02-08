@@ -1,8 +1,6 @@
-@import '~web/sass/color';
-@import '~web/sass/mixin';
-@import '~web/sass/media';
-
-$content-max-width: 1000px;
+@use '~web/sass/color';
+@use '~web/sass/mixin';
+@use '~web/sass/media';
 
 .coffee {
   width: 100%;
@@ -53,7 +51,7 @@ $content-max-width: 1000px;
 
 .link {
   text-decoration: none;
-  color: $anchor;
+  color: color.$anchor;
 }
 
 .root {
@@ -91,7 +89,7 @@ $content-max-width: 1000px;
   color: #fff;
 }
 
-@include phone() {
+@include media.phone() {
   .content {
     > *:not(:first-child) {
       margin-top: 20px;
@@ -99,16 +97,16 @@ $content-max-width: 1000px;
   }
 }
 
-@include not_phone() {
+@include media.not_phone() {
   .coffee {
-    max-width: $content-max-width / 2;
+    max-width: media.$content-max-width / 2;
     margin: 0 auto;
   }
 
   .content {
     display: flex;
     align-items: center;
-    max-width: $content-max-width;
+    max-width: media.$content-max-width;
     margin: 0 auto;
 
     > *:not(:first-child) {

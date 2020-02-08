@@ -3,7 +3,7 @@
 ```sh
 npm -g install yarn
 yarn
-docker build --rm -f docker/Dockerfile -t luissaybe/ttmik .
+docker build --rm -f docker/Dockerfile -t luissaybe/luissaybe .
 ```
 
 ### watch for changes
@@ -12,18 +12,17 @@ docker build --rm -f docker/Dockerfile -t luissaybe/ttmik .
 yarn watch
 ```
 
-### clean and run project
+
+### run in local
 
 ```sh
-docker-compose down
-docker-compose rm
-docker-compose up
+docker run -it --name luissaybe -v $(pwd):/root/project --rm -p 80:80 luissaybe/luissaybe
 ```
 
 ### run in prod
 
 ```sh
-docker run -dit --name ttmik --rm -p 80:80 -p 443:443 luissaybe/ttmik nginx -c /root/project/docker/nginx.conf
+docker run -dit --name luissaybe --rm -p 80:80 -p 443:443 -v /root/certs:/root/certs luissaybe/luissaybe nginx -c /root/project/docker/nginx-https.conf
 ```
 
 ### get SSL certs

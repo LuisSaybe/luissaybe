@@ -1,7 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const packageJson = require(path.resolve(__dirname, 'package.json'));
 
 module.exports = function() {
   return {
@@ -12,17 +11,15 @@ module.exports = function() {
       path.resolve(__dirname, 'web/sass/index.scss'),
     ],
     output: {
-      path: path.resolve(__dirname, 'web-dist'),
-      filename: `[name]-${packageJson.version}.js`
+      path: path.resolve(__dirname, 'dist'),
+      filename: "[contenthash].js",
     },
     plugins: [
       new HtmlWebpackPlugin({
-        version: packageJson.version,
-        template: path.resolve(__dirname, 'web/index-template.html'),
-        inject: false
+        template: path.resolve(__dirname, 'web/index-template.html')
       }),
       new MiniCssExtractPlugin({
-        filename: `index-${packageJson.version}.css`
+        filename: "[contenthash].css",
       })
     ],
     resolve: {
@@ -59,7 +56,10 @@ module.exports = function() {
               plugins: () => [require('autoprefixer')]
             }
           }, {
-            loader: 'sass-loader'
+            loader: 'sass-loader',
+            options: {
+              implementation: require("sass"),
+            },
           }]
         },
         {

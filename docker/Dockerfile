@@ -14,3 +14,5 @@ RUN \
     npm install -g yarn && \
     yarn && \
     yarn build
+
+CMD nginx -c /root/project/docker/nginx.conf
