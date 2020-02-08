@@ -113,6 +113,9 @@ export function Landing() {
               <a styleName='link' href='mailto:luis@trois.io'>luis@trois.io</a>
             </div>
             <div>
+              <a styleName="link" href="https://luissaybe.nyc3.digitaloceanspaces.com/luissaybe/resume.pdf">resume</a>
+            </div>
+            <div>
              <a styleName='link' href='https://github.com/luissaybe'>{t('github')}</a>
             </div>
             <div>
