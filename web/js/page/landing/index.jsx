@@ -35,24 +35,9 @@ export function Landing() {
             <img alt='spain' styleName='flag-svg' src='https://luissaybe.nyc3.digitaloceanspaces.com/image/spain.svg' />
           </button>
         </header>
-        <section role='main' styleName='section'>
-          <div styleName='content'>
-            <div styleName='left-section text-content text-vertical-spacing'>
-              <div styleName='title'>
-               {t('Hello')}
-              </div>
-            </div>
-            <div styleName='right-section'>
-              <img styleName='image' alt='' src='https://luissaybe.nyc3.digitaloceanspaces.com/image/moscow_resized_compressed.jpg' />
-            </div>
-          </div>
-        </section>
         <section styleName='section'>
           <div styleName='content'>
-            <div styleName='left-section title'>
-              {t('About Me')}
-            </div>
-            <div styleName='right-section text-content text-vertical-spacing'>
+            <div styleName='left-section text-content text-vertical-spacing'>
               <div>
                 {t('Programmer')}
               </div>
@@ -63,11 +48,9 @@ export function Landing() {
                 {t('Foreign language student')}
               </div>
             </div>
-          </div>
-        </section>
-        <section styleName='section'>
-          <div styleName='content'>
-            <img styleName='coffee' alt='coffee and books' src='https://luissaybe.nyc3.digitaloceanspaces.com/image/coffee_resize_compressed.jpg' />
+            <div styleName='right-section'>
+              <img alt='Luis in seoul' styleName='image' src='https://luissaybe.nyc3.digitaloceanspaces.com/luissaybe/seoul.jpg' />
+            </div>
           </div>
         </section>
         <section styleName='what-i-am-looking-for section'>
@@ -77,7 +60,7 @@ export function Landing() {
             </div>
             <div styleName='right-section text-content goals text-vertical-spacing'>
               <div>
-                <a styleName='link' href="https://www.facebook.com/marina.pereleshina.5/posts/1588862781125456">
+                <a styleName='link' href="https://luissaybe.nyc3.digitaloceanspaces.com/luissaybe/seoul.jpg">
                   {t('Balboa')}
                 </a>
               </div>
@@ -104,7 +87,7 @@ export function Landing() {
         </section>
         <section styleName='section'>
           <div styleName='content'>
-            <img styleName='coffee' alt='coffee and books' src='https://luissaybe.nyc3.digitaloceanspaces.com/luissaybe/hanlasan.jpg' />
+          <img styleName='coffee' alt='coffee and books' src='https://luissaybe.nyc3.digitaloceanspaces.com/image/coffee_resize_compressed.jpg' />
           </div>
         </section>
         <section styleName='section'>
@@ -113,7 +96,7 @@ export function Landing() {
               <a styleName='link' href='mailto:luis@trois.io'>luis@trois.io</a>
             </div>
             <div>
-              <a styleName="link" href="https://luissaybe.nyc3.digitaloceanspaces.com/luissaybe/resume.pdf">resume</a>
+              <a styleName="link" href="https://luissaybe.nyc3.digitaloceanspaces.com/luissaybe/resume.pdf">{t("resume")}</a>
             </div>
             <div>
              <a styleName='link' href='https://github.com/luissaybe'>{t('github')}</a>

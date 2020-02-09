@@ -1,6 +1,5 @@
 {
   "Hello": "안녕하세요",
-  "About Me": "저에 대해서는",
   "github": "깃허브",
   "instagram": "인스타그램",
   "spotify": "스포티파이",
@@ -13,5 +12,6 @@
   "Korean langauge": "한국어",
   "Programming puzzles": "프로그래밍 퍼즐",
   "Reinforcement learning": "강화 학습",
-  "Mathematics": "수학"
+  "Mathematics": "수학",
+  "resume": "이력서"
 }

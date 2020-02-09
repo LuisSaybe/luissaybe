@@ -1,6 +1,5 @@
 {
   "Hello": "Salut",
-  "About Me": "À propos de moi",
   "Programmer": "Informatique",
   "Guitar student": "Étudiant en guitare",
   "Foreign language student": "Etudiant en langue étrangère",
@@ -13,5 +12,6 @@
   "github": "",
   "instagram": "",
   "spotify": "",
-  "kakaotalk id": ""
+  "kakaotalk id": "",
+  "resume": "CV"
 }
