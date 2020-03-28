@@ -4,9 +4,9 @@ services:
 node_js:
   - 8
 install:
-  - yarn
+  - docker build --rm -f docker/Dockerfile -t luissaybe/luissaybe .
 script:
-  - yarn build
+  - echo 'hello'
 deploy:
   provider: script
   script: bash docker/docker-push.bash
