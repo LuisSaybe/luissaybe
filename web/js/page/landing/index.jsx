@@ -60,7 +60,7 @@ export function Landing() {
             </div>
             <div styleName='right-section text-content goals text-vertical-spacing'>
               <div>
-                <a styleName='link' href="https://luissaybe.nyc3.digitaloceanspaces.com/luissaybe/seoul.jpg">
+                <a styleName='link' href="https://www.facebook.com/marina.pereleshina.5/videos/1588854561126278">
                   {t('Balboa')}
                 </a>
               </div>
@@ -75,7 +75,7 @@ export function Landing() {
                 </a>
               </div>
               <div>
-                <a styleName='link' href="https://github.com/LuisSaybe/tf-gridworld">
+                <a styleName='link' href="https://github.com/LuisSaybe/connect-4-reinforcement-learning">
                   {t('Reinforcement learning')}
                 </a>
               </div>
