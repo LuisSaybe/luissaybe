@@ -7,9 +7,9 @@ import {
   UserInterfaceSettingsContext,
   DispatchUserInterfaceSettingsContext
 } from 'web/js/context';
-
 import { Landing } from 'web/js/page/landing';
 import { Music } from 'web/js/page/music';
+import { TalkToMeInKorean } from 'web/js/page/ttmik';
 
 import './style.scss';
 
@@ -55,7 +55,8 @@ export function Application() {
       <div styleName='root'>
         <Switch>
           <Route path='/music' component={Music} />
-          <Route path='/' component={Landing} />
+          <Route path='/ttmik' component={TalkToMeInKorean} />
+          <Route component={Landing} />
         </Switch>
       </div>
     </BrowserRouter>
