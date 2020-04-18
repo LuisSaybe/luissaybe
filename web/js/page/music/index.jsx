@@ -16,6 +16,8 @@ export function Music() {
       <a href="https://luissaybe.nyc3.digitaloceanspaces.com/music/tank.mp3">菅野 よう子, Kanno Yōko, シートベルツ - Tank!</a>
       <a href="https://luissaybe.nyc3.digitaloceanspaces.com/music/stomping-at-the-savoy.mp3">Holleran Orchestra - Stomping at the Savoy</a>
       <a href='https://luissaybe.nyc3.digitaloceanspaces.com/music/anri-shyness_boy.mp3'>Anri - Shyness Boy</a>
+      <a href='https://luissaybe.nyc3.digitaloceanspaces.com/music/tadow.mp3'>Fkj & Masego - Tadow</a>
+      <a href='https://luissaybe.nyc3.digitaloceanspaces.com/music/letsstaytogether.mp3'>Let's stay together</a>
     </div>
   );
 }

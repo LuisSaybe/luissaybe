@@ -16,7 +16,7 @@ export function TalkToMeInKorean() {
       <a href="https://player.vimeo.com/video/331137512">ㄴ insertion</a>
       <a href="https://player.vimeo.com/video/331137583">ㅅ insertion</a>
       <a href="https://player.vimeo.com/video/331744617">Ending Consonants Sounds</a>
-      <a href="https://player.vimeo.com/video/331137648">ㄴ vs N</a>
+      <a href="https://player.vimeo.com/video/331137648">ㄴ vs N</a>when
       <a href="https://player.vimeo.com/video/331137731">ㄹ vs L</a>
       <a href="https://player.vimeo.com/video/331725653">ㄷ vs D</a>
       <a href="https://player.vimeo.com/video/331363666">Differentiating ㅈ, ㅊ, and ㅉ</a>
@@ -29,10 +29,9 @@ export function TalkToMeInKorean() {
       <a href="https://player.vimeo.com/video/331166728">요 vs 여</a>
       <a href="https://player.vimeo.com/video/331166728">요 vs 여</a>
       <a href="https://player.vimeo.com/video/331169908">으 vs 우</a>
-      <a href="https://player.vimeo.com/video/331175094">When Spelling and Pronunciation Are Different
-</a>
-    <a href="https://player.vimeo.com/video/331167833">English Loan Words</a>
-    <a href="https://player.vimeo.com/video/331160275">Korean Words English Speakers Know</a>
+      <a href="https://player.vimeo.com/video/331175094">When Spelling and Pronunciation Are Different</a>
+      <a href="https://player.vimeo.com/video/331167833">English Loan Words</a>
+      <a href="https://player.vimeo.com/video/331160275">Korean Words English Speakers Know</a>
     </div>
   );
 }
