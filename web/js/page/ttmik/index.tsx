@@ -20,12 +20,12 @@ export function TalkToMeInKorean() {
       <a href="https://player.vimeo.com/video/331137731">ㄹ vs L</a>
       <a href="https://player.vimeo.com/video/331725653">ㄷ vs D</a>
       <a href="https://player.vimeo.com/video/331363666">Differentiating ㅈ, ㅊ, and ㅉ</a>
-      <a href="https://player.vimeo.com/video/331174644?app_id=122963">Differentiating ㄱ, ㅋ, and ㄲ</a>
+      <a href="https://player.vimeo.com/video/331174644">Differentiating ㄱ, ㅋ, and ㄲ</a>
       <a href="https://player.vimeo.com/video/331363723">Differentiating ㅂ, ㅍ, and ㅃ</a>
       <a href="https://player.vimeo.com/video/331160109">Differentiating ㅅ and ㅆ</a>
       <a href="https://player.vimeo.com/video/331161269">ㄷ, ㅌ, and ㄸ</a>
       <a href="https://player.vimeo.com/video/331161269">ㄷ, ㅌ, and ㄸ</a>
-      <a href="https://player.vimeo.com/video/331160213?app_id=122963">오 vs 어</a>
+      <a href="https://player.vimeo.com/video/331160213">오 vs 어</a>
       <a href="https://player.vimeo.com/video/331166728">요 vs 여</a>
       <a href="https://player.vimeo.com/video/331166728">요 vs 여</a>
       <a href="https://player.vimeo.com/video/331169908">으 vs 우</a>

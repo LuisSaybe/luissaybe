@@ -1,15 +1,12 @@
-class Language {
-  static en = 'en';
-  static ko = 'ko';
-  static fr = 'fr';
+export enum Language {
+  en = 'en',
+  ko = 'ko',
+  fr = 'fr',
+  es = 'es',
 }
 
-export const getUserLanguage = (user = null, navigator = null) => {
+export const getUserLanguage = (navigator = null) => {
   let result = null;
-
-  if (user !== null  && user.lastLanguage !== null) {
-    result = user.lastLanguage;
-  }
 
   if (navigator !== null && result === null) {
     if (navigator.languages) {
@@ -29,5 +26,5 @@ export const getUserLanguage = (user = null, navigator = null) => {
 };
 
 export const getNavigatorLanguage = (navigator = null) => {
-	return getUserLanguage(null, navigator);
+	return getUserLanguage(navigator);
 };

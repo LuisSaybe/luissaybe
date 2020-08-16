@@ -5,9 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = function() {
   return {
     entry: [
-      'core-js/stable',
-      'regenerator-runtime/runtime',
-      path.resolve(__dirname, 'web/js/index.jsx'),
+      path.resolve(__dirname, 'web/js/index.tsx'),
       path.resolve(__dirname, 'web/sass/index.scss'),
     ],
     output: {
@@ -27,7 +25,7 @@ module.exports = function() {
         common: path.resolve(__dirname, 'common'),
         web: path.resolve(__dirname, 'web'),
       },
-      extensions: ['.js', '.jsx']
+      extensions: ['.js', '.jsx', '.ts', '.tsx']
     },
     module: {
       rules: [
@@ -63,11 +61,13 @@ module.exports = function() {
           }]
         },
         {
-          test: /(\.jsx?)$/,
+          test: name => name.endsWith('.ts') || name.endsWith('.tsx'),
           exclude: /node_modules/,
           use: [
             { loader: 'babel-loader' },
-            { loader: 'eslint-loader' }
+            {
+              loader: "ts-loader",
+            },
           ]
         }
       ]

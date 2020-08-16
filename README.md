@@ -3,7 +3,6 @@
 ```sh
 npm -g install yarn
 yarn
-docker build --rm -f docker/Dockerfile -t luissaybe/luissaybe .
 ```
 
 ### watch for changes
@@ -12,11 +11,10 @@ docker build --rm -f docker/Dockerfile -t luissaybe/luissaybe .
 yarn watch
 ```
 
-
 ### run in local
 
 ```sh
-docker run -it --name luissaybe -v $(pwd):/root/project --rm -p 80:80 luissaybe/luissaybe
+$(yarn bin)/serve --single dist
 ```
 
 ### run in prod

@@ -1,37 +1,34 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useDispatch } from 'react-redux';
 
-import {
-  DispatchUserInterfaceSettingsContext
-} from 'web/js/context';
+import { set } from 'web/js/redux/user-interface/action';
+import { Language } from 'common/helpers';
 
 import './style.scss';
 
 export function Landing() {
+  const dispatch = useDispatch();
   const { t } = useTranslation();
-  const dispatchUserInterfaceSettings = useContext(DispatchUserInterfaceSettingsContext);
   const selectLanguage = (language) => {
-    dispatchUserInterfaceSettings({
-      type: 'SET',
-      data: {
-        language
-      }
-    });
+    dispatch(set({
+      language
+    }));
   };
 
   return (
     <div styleName='root'>
         <header styleName='languages'>
-          <button onClick={() => selectLanguage('ko')} styleName='language-button'>
+          <button onClick={() => selectLanguage(Language.ko)} styleName='language-button'>
             <img styleName='flag-svg' alt='south korea' src='https://luissaybe.nyc3.digitaloceanspaces.com/image/south-korea.svg' />
           </button>
-          <button onClick={() => selectLanguage('en')} styleName='language-button'>
+          <button onClick={() => selectLanguage(Language.en)} styleName='language-button'>
             <img styleName='flag-svg' alt='united kingdom' src='https://luissaybe.nyc3.digitaloceanspaces.com/image/united-kingdom.svg' />
           </button>
-          <button onClick={() => selectLanguage('fr')} styleName='language-button'>
+          <button onClick={() => selectLanguage(Language.fr)} styleName='language-button'>
             <img styleName='flag-svg' alt='france' src='https://luissaybe.nyc3.digitaloceanspaces.com/image/france.svg' />
           </button>
-          <button onClick={() => selectLanguage('es')}  styleName='language-button'>
+          <button onClick={() => selectLanguage(Language.es)}  styleName='language-button'>
             <img alt='spain' styleName='flag-svg' src='https://luissaybe.nyc3.digitaloceanspaces.com/image/spain.svg' />
           </button>
         </header>
