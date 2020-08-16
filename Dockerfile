@@ -9,7 +9,7 @@ RUN \
     yum -y update && \
     yum install -y wget nginx-1.16.1 git-all curl nano which man manpages epel-release certbot-nginx && \
 
-    curl --silent --location https://rpm.nodesource.com/setup_11.x | bash - && \
+    curl --silent --location https://rpm.nodesource.com/setup_14.x | bash - && \
     yum -y install nodejs && \
     npm install -g yarn && \
     yarn && \
