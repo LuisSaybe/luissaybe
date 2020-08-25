@@ -5,6 +5,7 @@ import './style.scss';
 export function Music() {
   return (
     <div styleName='root'>
+      <a href='https://luissaybe.nyc3.digitaloceanspaces.com/music/farewell.mp3'>트윈 폴리오 - 교별</a>
       <a href="https://luissaybe.nyc3.digitaloceanspaces.com/music/roy-kim-spring.mp3">로이킴 - 봄봄봄</a>
       <a href="https://luissaybe.nyc3.digitaloceanspaces.com/music/love_talkin.mp3">山下 達郎, Yamashita Tatsurō - Love Talkin</a>
       <a href="https://luissaybe.nyc3.digitaloceanspaces.com/music/ee-nar-chee.mp3">이날치 - 범 내려온다</a>
@@ -19,6 +20,8 @@ export function Music() {
       <a href='https://luissaybe.nyc3.digitaloceanspaces.com/music/tadow.mp3'>Fkj & Masego - Tadow</a>
       <a href='https://luissaybe.nyc3.digitaloceanspaces.com/music/letsstaytogether.mp3'>Let&apos;s stay together</a>
       <a href='https://luissaybe.nyc3.digitaloceanspaces.com/music/iris.mp3'>James Bartholomew - Iris</a>
+      <a href='https://luissaybe.nyc3.digitaloceanspaces.com/music/wedding_cake.mp3'>트윈폴리오 - 위딩케잌</a>
+      <a href='https://luissaybe.nyc3.digitaloceanspaces.com/music/disco.mp3'>뉴 디스코</a>
     </div>
   );
 }
