@@ -5,6 +5,7 @@ import './style.scss';
 export function Music() {
   return (
     <div styleName='root'>
+      <a href='https://luissaybe.nyc3.digitaloceanspaces.com/music/mine.mp3'>Mine</a>
       <a href='https://luissaybe.nyc3.digitaloceanspaces.com/music/peach_pie.mp3'>竹内まりや - Fushigi Na Peach Pie</a>
       <a href='https://luissaybe.nyc3.digitaloceanspaces.com/music/japanese-chill.mp3'>日本 Vibes</a>
       <a href='https://luissaybe.nyc3.digitaloceanspaces.com/music/farewell.mp3'>트윈 폴리오 - 교별</a>
