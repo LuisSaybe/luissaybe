@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ESLintPlugin = require("eslint-webpack-plugin");
 
 module.exports = function() {
   return {
@@ -18,7 +19,8 @@ module.exports = function() {
       }),
       new MiniCssExtractPlugin({
         filename: "[contenthash].css",
-      })
+      }),
+      new ESLintPlugin(),
     ],
     resolve: {
       alias: {
@@ -30,47 +32,47 @@ module.exports = function() {
     module: {
       rules: [
         {
-          test: path => path.endsWith('.css'),
+          test: (path) => path.endsWith(".css"),
           include: /node_modules/,
-          loaders:  [MiniCssExtractPlugin.loader, 'css-loader']
+          use: [MiniCssExtractPlugin.loader, "css-loader"],
         },
         {
-          test: path => path.endsWith('.scss'),
-          exclude: /node_modules/,
-          use: [{
-            loader: MiniCssExtractPlugin.loader,
-          }, {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 2,
-              modules: {
-                localIdentName: '[path]-[name]-[local]'
-              }
-            }
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: () => [require('autoprefixer')]
-            }
-          }, {
-            loader: 'sass-loader',
-            options: {
-              implementation: require("sass"),
-            },
-          }]
-        },
-        {
-          test: name => name.endsWith('.ts') || name.endsWith('.tsx'),
+          test: (path) => path.endsWith(".scss"),
           exclude: /node_modules/,
           use: [
-            { loader: 'babel-loader' },
+            {
+              loader: MiniCssExtractPlugin.loader,
+            },
+            {
+              loader: "css-loader",
+              options: {
+                importLoaders: 2,
+                modules: {
+                  localIdentName: "[path]-[name]-[local]"
+                },
+              },
+            },
+            {
+              loader: "sass-loader",
+              options: {
+                implementation: require("sass"),
+              },
+            },
+          ],
+        },
+        {
+          test: /(\.tsx?)$/,
+          exclude: /node_modules/,
+          use: [
+            {
+              loader: "babel-loader",
+            },
             {
               loader: "ts-loader",
             },
-          ]
-        }
-      ]
+          ],
+        },
+      ],
     }
   };
 };

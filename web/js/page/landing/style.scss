@@ -3,7 +3,8 @@
 @use '~web/sass/media';
 
 .coffee {
-  width: 100%;
+  display: block;
+  height: 340px;
 }
 
 .content {
@@ -40,7 +41,8 @@
 }
 
 .image {
-  width: 100%;
+  display: block;
+  height: 240px;
   border-radius: 6px;
 }
 
@@ -101,6 +103,7 @@
   .coffee {
     max-width: media.$content-max-width / 2;
     margin: 0 auto;
+    border-radius: 6px;
   }
 
   .content {

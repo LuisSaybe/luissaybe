@@ -6,10 +6,7 @@
         "generateScopedName": "[path]-[name]-[local]",
         "filetypes": {
           ".scss": {
-            "syntax": "postcss-scss",
-            "plugins": [
-              "postcss-nested"
-            ]
+            "syntax": "postcss-scss"
           }
         }
       }
