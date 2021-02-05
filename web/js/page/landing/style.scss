@@ -4,7 +4,11 @@
 
 .coffee {
   display: block;
-  height: 340px;
+  width: 100%;
+
+  @include media.not_phone() {
+    height: 340px;
+  }
 }
 
 .content {
@@ -42,8 +46,12 @@
 
 .image {
   display: block;
-  height: 240px;
   border-radius: 6px;
+  width: 100%;
+
+  @include media.not_phone() {
+    height: 240px;
+  }
 }
 
 .goals {
