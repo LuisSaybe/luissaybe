@@ -4,14 +4,17 @@
   "instagram": "인스타그램",
   "spotify": "스포티파이",
   "kakaotalk id": "카카오톡 아이디",
-  "Programmer": "프로그래머",
+  "Programmer": "개발자",
   "Guitar student": "기타 학생",
   "Foreign language student": "외국어 학생",
-  "Interest": "취미",
+  "Interests": "취미",
   "Balboa": "발보아 댄스",
   "Korean langauge": "한국어",
   "Programming puzzles": "프로그래밍 퍼즐",
   "Reinforcement learning": "강화 학습",
   "Mathematics": "수학",
-  "resume": "이력서"
+  "resume": "이력서",
+  "programmer": "개발자",
+  "Classical guitar": "클래식 기타",
+  "Foreign languages": "외국어"
 }

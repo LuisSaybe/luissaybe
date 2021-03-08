@@ -36,13 +36,10 @@ export function Landing() {
           <div styleName='content'>
             <div styleName='left-section text-content text-vertical-spacing'>
               <div>
+                {t('Luis Saybe')}
+              </div>
+              <div>
                 {t('Programmer')}
-              </div>
-              <div>
-                {t('Guitar student')}
-              </div>
-              <div>
-                {t('Foreign language student')}
               </div>
             </div>
             <div styleName='right-section'>
@@ -53,7 +50,7 @@ export function Landing() {
         <section styleName='what-i-am-looking-for section'>
           <div styleName='content'>
             <div styleName='left-section what-i-am-looking-for-title title'>
-              {t('Interest')}
+              {t('Interests')}
             </div>
             <div styleName='right-section text-content goals text-vertical-spacing'>
               <div>
@@ -67,7 +64,7 @@ export function Landing() {
                 </a>
               </div>
               <div>
-                <a styleName='link' href="https://app.codesignal.com/profile/luissaybe">
+                <a styleName='link' href="https://leetcode.com/luissaybe">
                   {t('Programming puzzles')}
                 </a>
               </div>
@@ -77,7 +74,10 @@ export function Landing() {
                 </a>
               </div>
               <div>
-                {t('Mathematics')}
+                {t('Classical guitar')}
+              </div>
+              <div>
+                {t('Foreign languages')}
               </div>
             </div>
           </div>

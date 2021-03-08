@@ -7,11 +7,13 @@
   "Programmer": "Programador",
   "Guitar student": "Estudiante de guitarra",
   "Foreign language student": "Estudiante de lengua extranjera",
-  "Interest": "Intereses",
+  "Interests": "Intereses",
   "Balboa": "",
   "Korean langauge": "Lenguaje coreano",
   "Programming puzzles": "Programación de acertijos",
   "Reinforcement learning": "Aprendizaje por refuerzo",
   "Mathematics": "Matemáticas",
-  "resume": "currículum"
+  "resume": "currículum",
+  "Foreign languages": "Langue étrangères",
+  "Clasical guitar": "Guitarra clásica"
 }

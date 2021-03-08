@@ -3,7 +3,7 @@
   "Programmer": "Informatique",
   "Guitar student": "Étudiant en guitare",
   "Foreign language student": "Etudiant en langue étrangère",
-  "Interest": "Intérêts",
+  "Interests": "Intérêts",
   "Balboa": "",
   "Korean langauge": "Le langue coréenne",
   "Programming puzzles": "Puzzles logique",
@@ -13,5 +13,7 @@
   "instagram": "",
   "spotify": "",
   "kakaotalk id": "",
-  "resume": "CV"
+  "resume": "CV",
+  "Foreign languages": "Langue étrangères",
+  "Clasical guitar": "Guitare classique"
 }
