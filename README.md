@@ -1,28 +1,12 @@
-### build image
+### Luis E. Banegas Saybe
 
-```sh
-npm -g install yarn
-yarn
-```
+- [Programming Puzzles](https://leetcode.com/luissaybe/)
+- [Reinforcement Learning](https://github.com/LuisSaybe/connect-4-reinforcement-learning)
+- Studying Foreign Languages - :es: :kr: :fr: :cn: :jp:
+- [Korean Language](https://seoullatte.com)
+- Classical Guitar
+- Graphic Novels
+- [R&B](https://www.youtube.com/watch?v=mjVq7Ha_WtQ)
+- [Balboa](https://www.facebook.com/marina.pereleshina.5/videos/1588854561126278) (dance)
 
-### watch for changes
-
-```sh
-yarn watch
-```
-
-### run in local
-
-```sh
-$(yarn bin)/serve --single dist
-```
-
-### run in prod
-
-```sh
-docker run -dit --name luissaybe --rm -p 80:80 -p 443:443 -v /root/certs:/root/certs luissaybe/luissaybe nginx -c /root/project/docker/nginx-https.conf
-```
-
-### get SSL certs
-
-[tutorial](https://www.digitalocean.com/community/tutorials/how-to-use-certbot-standalone-mode-to-retrieve-let-s-encrypt-ssl-certificates-on-ubuntu-1804)
+[Website](https://luissaybe.com)
