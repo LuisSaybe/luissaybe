@@ -1,9 +1,10 @@
 {
-    "editor.renderWhitespace": "all",
-    "editor.insertSpaces": true,
-    "editor.formatOnSave": true,
-    "prettier.requireConfig": true,
-    "editor.codeActionsOnSave": {
-      "source.fixAll.tslint": true
-    }
+  "editor.renderWhitespace": "all",
+  "editor.insertSpaces": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.requireConfig": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
   }
+}

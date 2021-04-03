@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   web:
-    image: luissaybe/ttmik
+    image: luissaybe/luissaybe
     command: nginx -c /root/project/docker/nginx.conf
     ports:
       - "80:80"

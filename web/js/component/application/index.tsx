@@ -8,10 +8,10 @@ import { getUserLanguage } from 'common/helpers';
 import { Landing } from 'web/js/page/landing';
 import { Music } from 'web/js/page/music';
 import { TalkToMeInKorean } from 'web/js/page/ttmik';
+import { Video } from 'web/js/page/video';
 import { useGoogleAnalytics } from 'web/js/hook/useGoogleAnalytics';
 import { set } from 'web/js/redux/user-interface/action';
 import { RootState } from 'web/js/redux/reducer';
-
 import './style.scss';
 
 export function Application() {
@@ -50,6 +50,7 @@ export function Application() {
     <div styleName='root'>
       <Switch>
         <Route path='/music' component={Music} />
+        <Route path='/video' component={Video} />
         <Route path='/ttmik' component={TalkToMeInKorean} />
         <Route component={Landing} />
       </Switch>
