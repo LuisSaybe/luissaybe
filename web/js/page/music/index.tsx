@@ -5,6 +5,9 @@ import "./style.scss";
 export function Music() {
   return (
     <div styleName="root">
+      <a href="https://luissaybe.nyc3.digitaloceanspaces.com/music/chicken-shack-shuffle.mp3">
+        Mable Lee - Chicken Shack Shuffle
+      </a>
       <a href="https://luissaybe.nyc3.digitaloceanspaces.com/music/down-south.mp3">
         Prairie High School - Down South Camp Meeting
       </a>
