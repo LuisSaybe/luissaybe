@@ -109,7 +109,14 @@ export function Landing() {
                 {t("Reinforcement learning")}
               </a>
             </div>
-            <div>{t("Classical guitar")}</div>
+            <div>
+              <a
+                styleName="link"
+                href="https://www.youtube.com/watch?v=2Y0TmlIoEfQ"
+              >
+                {t("Classical guitar")}
+              </a>
+            </div>
             <div>{t("Foreign languages")}</div>
           </div>
         </div>
