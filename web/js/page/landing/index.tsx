@@ -117,7 +117,14 @@ export function Landing() {
                 {t("Classical guitar")}
               </a>
             </div>
-            <div>{t("Foreign languages")}</div>
+            <div>
+              <a
+                styleName="link"
+                href="https://www.duolingo.com/profile/luissaybe"
+              >
+                {t("Foreign languages")}
+              </a>
+            </div>
           </div>
         </div>
       </section>
