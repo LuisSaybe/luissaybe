@@ -112,7 +112,7 @@ export function Landing() {
             <div>
               <a
                 styleName="link"
-                href="https://www.youtube.com/watch?v=2Y0TmlIoEfQ"
+                href="https://www.youtube.com/watch?v=g0eu_fYdVHs"
               >
                 {t("Classical guitar")}
               </a>
