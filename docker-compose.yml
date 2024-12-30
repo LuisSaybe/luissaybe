@@ -1,11 +1,16 @@
-version: '3.7'
-
 services:
-  web:
+  install:
     image: luissaybe/luissaybe
-    command: nginx -c /root/project/docker/nginx.conf
-    ports:
-      - "80:80"
-      - "443:443"
+    command: ["npm", "install"]
     volumes:
       - .:/root/project
+  serve:
+    image: luissaybe/luissaybe
+    command: ["npx", "serve", "-p", "80", "src"]
+    ports:
+      - "80:80"
+    volumes:
+      - .:/root/project
+    depends_on:
+      install:
+        condition: service_completed_successfully
