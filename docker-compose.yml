@@ -4,11 +4,11 @@ services:
     command: ["npm", "install"]
     volumes:
       - .:/root/project
-  serve:
+  vite:
     image: luissaybe/luissaybe
-    command: ["npx", "serve", "-p", "80", "src"]
+    command: ["npx", "vite"]
     ports:
-      - "80:80"
+      - "5173:5173"
     volumes:
       - .:/root/project
     depends_on:

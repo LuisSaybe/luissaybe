@@ -22,5 +22,6 @@ jobs:
         with:
           node-version: "20.x"
       - run: npm ci
-      - run: aws s3 sync src s3://luissaybe.com
+      - run: npm run build
+      - run: aws s3 sync dist s3://luissaybe.com
       - run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths '/*'
