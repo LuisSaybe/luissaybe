@@ -1,6 +1,6 @@
 ### Luis E. Banegas Saybe
 
-- [Programming Puzzles](https://leetcode.com/luissaybe/)
+- [Programming Puzzles](https://leetcode.com/u/user2523xT)
 - [Reinforcement Learning](https://github.com/LuisSaybe/connect-4-reinforcement-learning)
 - Studying Foreign Languages - :es: :kr: :fr: :cn: :jp:
 - [Classical Guitar](https://www.youtube.com/watch?v=2Y0TmlIoEfQ)

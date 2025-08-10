@@ -13,7 +13,7 @@ export function Application() {
       <div>
         <div>interests</div>
         <div className="interests list sublist">
-          <a href="https://leetcode.com/u/luissaybe/">programming puzzles</a>
+          <a href="https://leetcode.com/u/user2523xT">programming puzzles</a>
           <a href="https://www.youtube.com/watch?v=g0eu_fYdVHs">classical guitar</a>
           <div>graphic novels</div>
           <div>studying foreign languages</div>
