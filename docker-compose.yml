@@ -1,11 +1,11 @@
 services:
   install:
-    image: luissaybe/luissaybe
+    image: luissaybe
     command: ["npm", "install"]
     volumes:
       - .:/root/project
   vite:
-    image: luissaybe/luissaybe
+    image: luissaybe
     command: ["npx", "vite"]
     ports:
       - "5173:5173"

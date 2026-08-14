@@ -1,11 +1,10 @@
-import './app.css'
+import './index.css';
 
-export function Application() {
+export function Index() {
   return (
     <div className="list root text">
       <div>
-        software engineer at&nbsp;
-        <a href="https://joinbetter.com">Better Health</a>
+        software engineer
       </div>
       <div>
         <a href="/resume.pdf">resume</a>
