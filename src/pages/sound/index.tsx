@@ -35,6 +35,14 @@ export function Sound() {
     {
         title: 'wait wait',
         url: 'https://luigipublic.s3.us-east-2.amazonaws.com/no-no-wait-wait.mp3'
+    },
+    {
+      title: 'knife in the dark',
+      url: 'https://luigipublic.s3.us-east-2.amazonaws.com/knife.mp3'
+    },
+    {
+      title: 'avengers',
+      url: 'https://luigipublic.s3.us-east-2.amazonaws.com/avengers.mp3'
     }
   ];
 
