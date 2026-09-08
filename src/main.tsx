@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 
 import { Index } from './pages/index/index.tsx';
 import { Sound } from './pages/sound/index.tsx';
+import { Time } from './pages/time/index.tsx';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
@@ -12,6 +13,7 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/sound" element={<Sound />} />
+        <Route path="/time" element={<Time />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
