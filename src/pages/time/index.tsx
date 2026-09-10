@@ -61,10 +61,27 @@ export function Time() {
       return;
     }
 
-    startedAt.current[index] = Date.now();
-    setRunning((current) => current.map((isRunning, timerIndex) => (
-      timerIndex === index ? true : isRunning
+    const now = Date.now();
+    const finalIncrements = startedAt.current.map((startTime, timerIndex) => (
+      timerIndex !== index && intervals.current[timerIndex] !== null && startTime !== null
+        ? now - startTime
+        : 0
+    ));
+
+    intervals.current.forEach((interval, timerIndex) => {
+      if (timerIndex !== index && interval !== null) {
+        window.clearInterval(interval);
+        intervals.current[timerIndex] = null;
+        startedAt.current[timerIndex] = null;
+      }
+    });
+
+    setElapsedTimes((current) => current.map((elapsed, timerIndex) => (
+      elapsed + finalIncrements[timerIndex]
     )));
+
+    startedAt.current[index] = now;
+    setRunning((current) => current.map((_, timerIndex) => timerIndex === index));
 
     intervals.current[index] = window.setInterval(() => {
       const now = Date.now();
