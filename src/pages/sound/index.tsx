@@ -5,6 +5,22 @@ import './index.css';
 export function Sound() {
   const entries = [
     {
+      url: 'https://luigipublic.s3.us-east-2.amazonaws.com/dragonborn.mp3',
+      title: 'dragon',
+    },
+    {
+      url: 'https://luigipublic.s3.us-east-2.amazonaws.com/battle.mp3',
+      title: 'battle',
+    },
+    {
+      url: 'https://luigipublic.s3.us-east-2.amazonaws.com/mission.mp3',
+      title: 'mission',
+    },
+    {
+      url: 'https://luigipublic.s3.us-east-2.amazonaws.com/pirate.mp3',
+      title: 'pirates',
+    },
+    {
       url: 'https://luigipublic.s3.us-east-2.amazonaws.com/beggars.mp3',
       title: 'beggars',
     },
